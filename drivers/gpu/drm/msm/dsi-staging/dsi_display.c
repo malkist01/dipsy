@@ -1689,7 +1689,6 @@ int dsi_display_set_power(struct drm_connector *connector,
 	struct drm_device *dev = NULL;
 #ifdef CONFIG_MACH_XIAOMI_F9S
 	struct msm_drm_notifier notify_data;
-	int event = power_mode;
 #endif
 #ifdef CONFIG_MACH_XIAOMI_C3J
 	struct drm_notify_data g_notify_data;
@@ -1725,7 +1724,8 @@ int dsi_display_set_power(struct drm_connector *connector,
 #endif
 
 #ifdef CONFIG_MACH_XIAOMI_F9S
-	notify_data.data = &event;
+	notify_data.data = &power_mode;
+	notify_data.id = MSM_DRM_PRIMARY_DISPLAY;
 #endif
 
 	switch (power_mode) {
