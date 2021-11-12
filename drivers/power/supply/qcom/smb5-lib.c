@@ -45,6 +45,10 @@ int usb_check_in_state = 0;
 #define DETACH_ATTACH_MAX_INTERVAL ((unsigned long)330)
 #endif
 
+#ifdef CONFIG_FORCE_FAST_CHARGE
+#include <linux/fastchg.h>
+#endif
+
 #define smblib_err(chg, fmt, ...)		\
 	pr_err("%s: %s: " fmt, chg->name,	\
 		__func__, ##__VA_ARGS__)	\
@@ -1372,6 +1376,11 @@ static int set_sdp_current(struct smb_charger *chg, int icl_ua)
 #ifdef CONFIG_MACH_XIAOMI_F9S
 	u8 reg_ufp_try;
 	u8 reg_ufp_legacy;
+#endif
+
+#ifdef CONFIG_FORCE_FAST_CHARGE
+	if (force_fast_charge > 0 && icl_ua == USBIN_500MA)
+		icl_ua = USBIN_900MA;
 #endif
 
 	/* power source is SDP */
