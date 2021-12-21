@@ -92,6 +92,7 @@
 	qcom,platform-bklight-en-gpio = <&pmi632_gpios 6 0>;
 	qcom,mdss-dsi-t-clk-post = <0x0f>;
 	qcom,mdss-dsi-t-clk-pre = <0x37>;
+	qcom,panel-allow-phy-poweroff;
 	qcom,mdss-dsi-display-timings {
 		timing@0{
 			qcom,mdss-dsi-panel-phy-timings = [
@@ -121,6 +122,7 @@
 	qcom,platform-bklight-en-gpio = <&pmi632_gpios 6 0>;
 	qcom,mdss-dsi-t-clk-post = <0x0e>;
 	qcom,mdss-dsi-t-clk-pre = <0x34>;
+	qcom,panel-allow-phy-poweroff;
 	qcom,mdss-dsi-display-timings {
 		timing@0{
 			qcom,mdss-dsi-panel-phy-timings = [
@@ -150,6 +152,7 @@
 	qcom,platform-bklight-en-gpio = <&pmi632_gpios 6 0>;
 	qcom,mdss-dsi-t-clk-post = <0x0f>;
 	qcom,mdss-dsi-t-clk-pre = <0x37>;
+	qcom,panel-allow-phy-poweroff;
 	qcom,mdss-dsi-display-timings {
 		timing@0{
 			qcom,mdss-dsi-panel-phy-timings = [
