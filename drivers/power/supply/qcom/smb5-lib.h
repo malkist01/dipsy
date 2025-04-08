@@ -100,6 +100,7 @@ enum print_reason {
 #define BATT_TEMP_VOTER			"BATT_TEMP_VOTER"
 #define CALL_ICL_MAX_VOTER		"CALL_ICL_MAX_VOTER"
 #endif
+#define BYPASS_VOTER			"BYPASS_VOTER"
 
 #define BOOST_BACK_STORM_COUNT	3
 #define WEAK_CHG_STORM_COUNT	8
