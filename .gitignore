@@ -135,3 +135,5 @@ clang/
 gcc64/
 gcc32/
 out/
+*.zip
+log.txt
