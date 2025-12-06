@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
 SECONDS=0
-ZIPNAME="Neophyte-Solstice-A10-Ginkgo-$(TZ=Asia/Jakarta date +"%Y%m%d-%H%M").zip"
+ZIPNAME="Neophyte-Solstice-A10-KSU-Ginkgo-$(TZ=Asia/Jakarta date +"%Y%m%d-%H%M").zip"
 TC_DIR="$(pwd)/../tc/"
 CLANG_DIR="${TC_DIR}clang"
 GCC_64_DIR="${TC_DIR}aarch64-linux-android-4.9"
