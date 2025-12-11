@@ -8528,18 +8528,18 @@ static int cpu_shares_write_u64(struct cgroup_subsys_state *css,
 
 static void uclamp_set(struct cgroup_subsys_state *css)
 {
-	int i;
+    int i;
 
-	static struct uclamp_param tgts[] = {
-		{"top-app",            "10",  "max",  1, 1, 20480},
-		{"rt",			"0",  "max",  1, 0, 20480},
-		{"nnapi-hal",		"0",  "max",  1, 0, 20480},
-       		{"foreground",          "0",  "max",  1, 0, 20480},
-                {"camera-daemon",      "10",  "max",  1, 1, 20480},
-                {"system",              "0",  "max",  0, 0, 20480},
-                {"dex2oat",             "0",  "60",   0, 0,   512},
-        	{"background",          "0",  "50",   0, 0,  1024},
-        	{"system-background",   "0",  "50",   0, 0,  1024},
+    static struct uclamp_param tgts[] = {
+	        {"top-app",            "20",  "max",  1, 1, 8192},
+	        {"rt",                 "0",   "max",  1, 0, 4096},
+	        {"nnapi-hal",          "0",   "max",  1, 0, 4096},
+	        {"foreground",         "0",   "90",   1, 0, 3072},
+	        {"camera-daemon",      "30",  "max",  1, 1, 4096},
+	        {"system",             "0",   "60",   0, 0, 2048},
+	        {"dex2oat",            "0",   "40",   0, 0,  512},
+	        {"background",         "0",   "20",   0, 0, 1024},
+	        {"system-background",  "0",   "30",   0, 0, 1024},
 	};
 
         if(!css->cgroup->kn)
